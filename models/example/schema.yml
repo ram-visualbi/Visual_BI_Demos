@@ -1,0 +1,21 @@
+
+version: 2
+
+models:
+    - name: TopNInvoices
+      description: "Displays Top N Invoices"
+      columns:
+          - name: Customer
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null
+
+    - name: TopNCreditMemos
+      description: "Displays Top N Credit Memos"
+      columns:
+          - name: Customer
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null

@@ -1,0 +1,57 @@
+version: 2
+
+sources:
+  - name: ARRAY_TECHNOLOGIES
+    database: SF_TRYOUTS
+    schema: S4H_VBI_POC
+    quoting:
+      identifier: true
+    tables:
+      - name: BODS_FI_AR4
+        description: "Table for Account Receivables Module"
+        columns: 
+          - name: kunnr
+            description : "Customer number"
+            tests:
+             - unique
+             - not_null
+          - name: belnr
+            description : "Document number"
+                
+      - name: BODS_Cust_Txt
+        description: "Customer Texts Table"
+        columns:
+          - name: kunnr
+            description: "Customer Number"
+            tests:
+             - unique
+             - not_null
+          - name: txtmd
+            description: "Customer Name"    
+      
+      - name: BODS_FI_AP_4
+        description: "Table for Account Payables Module"
+        columns: 
+          - name: lifnr
+            description : "Vendor"
+            tests:
+             - unique
+             - not_null
+          - name: belnr
+            description : "Document Number"
+          - name: buzei
+            description : "Item"
+          - name: bldat
+            description : "Document Date"
+
+
+      - name: BODS_Vendor_Txt1
+        description: "Vendor Texts Table"
+        columns: 
+          - name: lifnr
+            description : "Vendor"
+            tests:
+             - unique
+             - not_null
+          - name: txtmd
+            description : "Vendor Name"

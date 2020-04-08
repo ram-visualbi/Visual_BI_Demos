@@ -8,12 +8,12 @@ array_tech:
   outputs:
    dev:
     type: snowflake
-    account: visualbi.east-us-2.azure
+    account: <your_account_name>
     user: <user_name>
     password: <password>
-    role: DBT_USR
-    database: SF_TRYOUTS
-    warehouse: SF_TRYOUTS_WH
-    schema: S4H_VBI_POC
+    role: <role>
+    database: <database>
+    warehouse: <warehouse>
+    schema: <schema_name>
     threads: 1
     client_session_keep_alive: False
